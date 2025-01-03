@@ -7,6 +7,11 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gerson121295/s9-GEP-PRODUCT-CARD"
+  },
+  "homepage": "https://fernando-herrera.com",
   "engines": {
     "node": ">=10"
   },
@@ -14,6 +19,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -49,9 +55,15 @@
   "devDependencies": {
     "@rollup/plugin-image": "^3.0.3",
     "@size-limit/preset-small-lib": "^11.1.6",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.1.0",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "@types/testing-library__react": "^10.2.0",
+    "gep-product-card": "file:",
     "husky": "^9.1.7",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8.4.49",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rollup-plugin-postcss": "^4.0.2",
@@ -60,8 +72,15 @@
     "tslib": "^2.8.1",
     "typescript": "^3.9.10"
   },
-  "dependencies": {
-    "gep-product-card": "file:",
-    "postcss": "^8.4.49"
+  "keywords": [
+    "product",
+    "card",
+    "Gerson121295"
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
